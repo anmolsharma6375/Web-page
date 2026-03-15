@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Bootstrap Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="my first prodect.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <!-- Left Side Logo -->
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://www.shutterstock.com/image-illustration/building-home-commercial-capitalist-logo-600nw-1636887436.jpg"
+          alt="Logo" height="50" width="60">
+      </a>
+
+      <!-- Hamburger Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Middle Navigation Links -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+
+          <!-- Dropdown for Our Services -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+              Our Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Service 1</a></li>
+              <li><a class="dropdown-item" href="#">Service 2</a></li>
+              <li><a class="dropdown-item" href="#">Service 3</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Side Get Started Button -->
+      <div class="d-none d-lg-block">
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <!-- ye html sa change image in seconds -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('https://wallpapercave.com/wp/wp12764058.jpg');">
+          <div class="carousel-caption text-center text-white">
+            <h1>Welcome to Our Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Discover our services and projects.</p>
+            <a href="#" class="btn btn-primary mt-3">Read More</a>
+          </div>
+        </div>
+        <div class="carousel-item"
+          style="background-image: url('https://c4.wallpaperflare.com/wallpaper/476/251/599/5bd1c7db07d1b-wallpaper-preview.jpg');">
+          <div class="carousel-caption text-center text-white">
+            <h1>We Build Amazing Websites</h1>
+            <p>High-quality, responsive, and modern web designs.<br>Experience the difference with us.</p>
+            <a href="#" class="btn btn-primary mt-3">Read More</a>
+          </div>
+        </div>
+        <div class="carousel-item"
+          style="background-image: url('https://i.pinimg.com/736x/0c/72/98/0c7298876db04bc2ba028e39f393db54.jpg');">
+          <div class="carousel-caption text-center text-white">
+            <h1>Grow Your Business</h1>
+            <p>Innovative digital solutions to boost your brand.<br>Let’s achieve success together.</p>
+            <a href="#" class="btn btn-primary mt-3">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls (Arrows) -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
+
+
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Left Side Content -->
+        <div class="col-lg-6">
+          <h5 class="text-uppercase text-primary">About Us</h5>
+
+          <!-- Tabs Nav -->
+          <ul class="nav nav-tabs mt-3" id="aboutTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="company-tab" data-bs-toggle="tab" data-bs-target="#company"
+                type="button" role="tab">
+                Our Company
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="mission-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button"
+                role="tab">
+                Our Mission
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button"
+                role="tab">
+                Our Vision
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tabs Content -->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="company" role="tabpanel">
+              <h3 class="mt-3">We Are a Creative Web Agency</h3>
+              <p>Our company specializes in delivering top-notch digital solutions. From stunning websites to impactful
+                branding, we bring your ideas to life with innovation and quality.</p>
+              <a href="#" class="btn btn-primary mt-2">Learn More</a>
+            </div>
+            <div class="tab-pane fade" id="mission" role="tabpanel">
+              <h3 class="mt-3">Our Mission is to Innovate</h3>
+              <p>We aim to create modern and effective web solutions that help businesses grow online. Our mission is to
+                push boundaries and deliver unmatched quality to our clients.</p>
+              <a href="#" class="btn btn-primary mt-2">Learn More</a>
+            </div>
+            <div class="tab-pane fade" id="vision" role="tabpanel">
+              <h3 class="mt-3">Our Vision for the Future</h3>
+              <p>We envision a world where every business, small or large, can leverage technology to succeed. Our
+                vision is to empower clients with powerful digital tools and strategies.</p>
+              <a href="#" class="btn btn-primary mt-2">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Image -->
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <img height="350px" src="https://wallpapers.com/images/hd/business-technology-platform-sdubseo9ll88uo4u.jpg"
+            alt="About Us">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"> -->
+
+  <!-- Our Services Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <!-- Section Heading -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Our Services</h2>
+        <p class="text-muted">
+          We provide innovative and high-quality digital solutions tailored to meet your needs.
+          From creative web design to strategic branding, our services are crafted to help you
+          succeed in today's competitive digital world.
+        </p>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Services Row -->
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-laptop display-4 text-primary"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Service 1</h5>
+            <p class="text-muted">
+              We create stunning and responsive websites that deliver exceptional user experiences.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-brush display-4 text-success"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Service 2</h5>
+            <p class="text-muted">
+              Our creative designs bring your brand to life with vibrant and engaging visuals.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-phone display-4 text-danger"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Service 3</h5>
+            <p class="text-muted">
+              We develop user-friendly mobile applications for iOS and Android platforms.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-graph-up display-4 text-warning"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Service 4</h5>
+            <p class="text-muted">
+              Our SEO strategies help your website rank higher and attract more visitors.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-shop display-4 text-info"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Service 5</h5>
+            <p class="text-muted">
+              We build modern e-commerce stores that drive sales and customer satisfaction.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-megaphone display-4 text-secondary"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Service 6</h5>
+            <p class="text-muted">
+              Our digital marketing campaigns increase your online visibility and brand reach.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4 fw-bold">Our Projects</h2>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="projectTabs" role="tablist">
+      <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#ai">AI</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#app">App</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#branding">Product Branding</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#books">Books</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- products  -->
+      <div class="tab-pane fade show active" id="ai">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="project-img">
+              <img src="https://i.pinimg.com/474x/c2/7e/1d/c27e1da486a9c79c716fe6b02c7e2e8d.jpg" alt="">
+              <div class="overlay">
+                <h5> Gaming Phone </h5>
+                <p>All rounder phone and specially gaming phone ummid se kam aur bajar Se Kam price</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-img">
+              <img
+                src="https://img.freepik.com/free-photo/ai-powered-device-concept_23-2151924131.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="">
+              <div class="overlay">
+                <h5>Gaming Controller</h5>
+                <p>It works smoothly on every device and in every game without any connectivity issues Buy Now</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-img">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1v_6p8PLh_oWg3Q0a8fFXe3yHZ_NukABnXQ&s"
+                alt="">
+              <div class="overlay">
+                <h5>Gaming PC</h5>
+                <p>There will be no installation charge, Gaming PC value for money</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mt-3">
+          <div class="col-md-4">
+            <div class="project-img">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="">
+              <div class="overlay">
+                <h5>Headphones</h5>
+                <p>You can use this Headphone in every activity and you will get great results.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-img">
+              <img src="https://c4.wallpaperflare.com/wallpaper/720/311/730/smartwatch-hands-icon-wallpaper-preview.jpg"
+                alt="">
+              <div class="overlay">
+                <h5>Smartwatch</h5>
+                <p>The best and cheapest smartwatches are available here, even cheaper than the market.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-img">
+              <img
+                src="https://c4.wallpaperflare.com/wallpaper/764/665/82/camera-digital-dslr-body-wallpaper-preview.jpg"
+                alt="">
+              <div class="overlay">
+                <h5> Camera</h5>
+                <p>Vaule for money.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Tabs (Copy same structure with different images/text) -->
+      <div class="tab-pane fade" id="app">App Projects here...</div>
+      <div class="tab-pane fade">
+
+      </div>
+
+      <section class="contact-section">
+        <div class="container">
+          <div class="text-center">
+            <h2>Contact Us</h2>
+            <p>We’d love to hear from you! Fill out the form or find us on the map below.</p>
+          </div>
+          <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+              <div class="contact-form bg-white p-4 shadow-sm rounded">
+                <form onsubmit="return validatePassword()">
+
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="Password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter the new password">
+                    <div id="passwordError" style="color:red; font-size:14px;"></div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary px-4">Submit</button>
+
+
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-control" rows="5" placeholder="Write your message"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary px-4">Send Message</button>
+                </form>
+              </div>
+            </div>
+
+
+
+
+
+            <!-- Map -->
+            <div class="col-lg-6">
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps?q=28%20gopi%20nagar%20Riddhi%20Siddhi%20chauraya%209%20dukan%20kalwar%20road%20Jhotwara%20Jaipur&output=embed"
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- Footer -->
+      <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-md-left">
+          <div class="row text-md-left">
+
+            <!-- Contact Info -->
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact Us</h5>
+              <p>📍 28 Gopi Nagar, Riddhi Siddhi Chauraya, 9 Dukan, Kalwar Road, Jhotwara, Jaipur</p>
+              <p>📞 +91 9001957788</p>
+              <p>✉ anmolsharma6375@gamil.com</p>
+            </div>
+
+            <!-- Google Map -->
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Find Us</h5>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.672064698673!2d75.72821607436865!3d26.88551206229326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db36c07fcb3ad%3A0xb22c3b8f60e876b8!2s28%20Gopi%20Nagar%2C%20Jhotwara%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1691832564677!5m2!1sen!2sin"
+                width="95%" height="220" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy">
+              </iframe>
+            </div>
+
+            <!-- Quick Links  -->
+            <!-- <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+              <p><a href="#" class="text-white" style="text-decoration:none;">Home</a></p>
+              <p><a href="#" class="text-white" style="text-decoration:none;">About Us</a></p>
+              <p><a href="#" class="text-white" style="text-decoration:none;">Services</a></p>
+              <p><a href="#" class="text-white" style="text-decoration:none;">Contact</a></p>
+            </div> -->
+
+            <div class="social-container">
+
+              <a href="https://www.facebook.com/" target="_blank" style="text-decoration: none;">
+
+              <div class="icon-wrapper fb-box">
+                <i class="fa-brands fa-facebook"></i>
+                  <div class="underline"></div>
+              </div>
+              </a>
+              
+              <a href="https://www.instagram.com/anmol_sharma.1286/" target="_blank" style="text-decoration: none;">
+
+              <div class="icon-wrapper insta-box">
+                <i class="fa-brands fa-instagram"></i>
+                <div class=" underline">
+                </div>
+              </div>
+              </a>
+
+
+<a href="https://www.youtube.com/" target="_blank" style="text-decoration: none;">
+              <div class="icon-wrapper you-box">
+                <i class="fa-brands fa-youtube"></i>
+
+                <div class="underline"></div>
+              </div>
+            </a>
+            </div>
+
+
+
+
+          </div>
+
+          <hr class="mb-4">
+
+
+          <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+              <p>© 2026 All Rights Reserved by
+                <a href="#" style="text-decoration:none;">
+                  <strong class="text-warning">Your Company</strong>
+                </a>
+              </p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="col-md-5 col-lg-4">
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i
+                        class="fab fa-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i
+                        class="fab fa-instagram"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i
+                        class="fab fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>  -->
+          </div>
+        </div>
+
+
+    </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="my first prodect.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
