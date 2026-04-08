@@ -1,0 +1,284 @@
+.carousel-item {
+  height: 90vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Overlay */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  /* Black overlay */
+}
+
+/* Content */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* .carousel-itemactive{
+
+    } */
+.carousel-item :active {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+/* image ko crop + cover karne ke liye */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ye image ko container me crop karke fit karega */
+  object-position: center;
+  display: block;
+  /* removes inline image whitespace */
+}
+
+.about-section {
+  padding: 60px 0;
+}
+
+.about-section img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+/* .col-md-4:hover {
+  transform: scale(1.1);
+  s
+} */
+
+.col-md-4 {
+  /* border: none; */
+  /* border-radius: 10px; */
+  /* background: #fff; */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); */
+  transition: all 0.3s ease; 
+  /* smooth for shadow, lift, icon */
+}
+
+.col-md-4 i {
+  transition: all 0.3s ease; 
+  /* smooth icon effect */
+  /* man part work in hover */
+}
+
+.col-md-4:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* .col-md-4:hover i {
+  transform: scale(1.2);
+  color: #0d6efd;
+} */
+
+
+    .project-img {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .project-img:hover img {
+      transform: scale(1.1);
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+    }
+    .project-img:hover .overlay {
+      opacity: 1;
+    }
+    /* Image Position Styling */
+    .row .col-md-4:nth-child(1) .project-img { margin-top: 20px; }
+    .row .col-md-4:nth-child(2) .project-img { margin-top: 20px; }
+    .row .col-md-4:nth-child(3) .project-img { margin-top: 20px; }
+  
+
+/* .tab-content{
+  border:;
+} */
+ .project-img{
+  border: 1px solid black;
+ }
+
+   .contact-section {
+      background: #f8f9fa;
+      padding: 60px 0;
+    }
+    .contact-section h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .contact-section p {
+      color: #6c757d;
+      margin-bottom: 40px;
+    }
+    .contact-form .form-control {
+      border-radius: 10px;
+      box-shadow: none;
+      border: 1px solid #ccc;
+    }
+    .contact-form button {
+      border-radius: 10px;
+      padding: 10px 25px;
+    }
+    .map-container {
+      height: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .error{
+      color: red;
+      font-size: 16px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+                /* सोशल लिंक्स का कंटेनर */
+            /* सोशल लिंक्स का कंटेनर */
+        .social-container {
+            display: flex;
+            gap: 40px;
+            margin-left: 80px;
+            
+        }
+
+        .icon-wrapper {
+            position: relative;
+            cursor: pointer;
+            width: 80px;
+            height: 100px;
+            /* आइकन के ऊपर आने के लिए जगह */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        /* 1. Permanent Underline (स्थायी रेखा) */
+        .underline {
+            width: 100%;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 2px;
+            transition: 0.3s ease;
+        }
+
+
+        .fb-box .underline {
+            background-color: #1877f2;
+        }
+
+        .insta-box .underline {
+            background-color: #e1306c;
+        }
+
+        .you-box .underline {
+            background-color: #ff0000;
+        }
+
+        /* YouTube Red */
+
+        /* 2. Icons (जो पहले से नीचे छिपे हैं) */
+        .fa-brands {
+            font-size: 50px;
+            color: white;
+            position: absolute;
+            bottom: -50px;
+            /* लाइन के नीचे छिपा हुआ */
+            opacity: 0;
+            transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            /* Smooth Pop-up */
+        }
+
+        /* 3. HOVER LOGIC: जब लाइन/कंटेनर पर माउस जाए */
+        .icon-wrapper:hover .fa-brands {
+            bottom: 10px;
+            /* नीचे से ऊपर आना */
+            opacity: 1;
+        }
+
+        /* होवर पर अंडरलाइन का गायब होना */
+        .icon-wrapper:hover .underline {
+            opacity: 0;
+
+        }
+
+        /* अलग-अलग कलर्स */
+        .icon-wrapper:hover .fa-facebook {
+            color: #1877f2;
+        }
+
+        .icon-wrapper:hover .fa-instagram {
+            color: #e1306c;
+        }
+
+        .icon-wrapper:hover .fa-youtube {
+            color: #ff0000;
+        }
+
+        /* होवर पर स्पेसिफिक अंडरलाइन कलर (अगर आप दिखाना चाहें) */
+        .fb-box:hover .underline {
+            background-color: #1877f2;
+        }
