@@ -200,7 +200,7 @@
         .social-container {
             display: flex;
             gap: 40px;
-            /* margin-left: 80px; */
+            margin-left: 80px;
             
         }
 
@@ -282,3 +282,19 @@
         .fb-box:hover .underline {
             background-color: #1877f2;
         }
+
+
+/* Default mobile screen ke liye margin chota rakho */
+.social-container {
+    display: flex;
+    gap: 20px;
+    margin-left: 20px; /* Mobile par kam margin taaki overflow na ho */
+}
+
+/* Jab screen badi ho (jaise laptop ya tablet), tab 80px margin apply ho */
+@media (min-width: 768px) {
+    .social-container {
+        margin-left: 80px;
+        gap: 40px;
+    }
+}
