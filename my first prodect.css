@@ -138,9 +138,6 @@
     .row .col-md-4:nth-child(3) .project-img { margin-top: 20px; }
   
 
-/* .tab-content{
-  border:;
-} */
  .project-img{
   border: 1px solid black;
  }
@@ -194,14 +191,11 @@
 
 
      
-
-                /* सोशल लिंक्स का कंटेनर */
-            /* सोशल लिंक्स का कंटेनर */
+        /* social container */
         .social-container {
             display: flex;
             gap: 40px;
             margin-left: 80px;
-            
         }
 
         .icon-wrapper {
@@ -209,14 +203,14 @@
             cursor: pointer;
             width: 80px;
             height: 100px;
-            /* आइकन के ऊपर आने के लिए जगह */
+            /* space for icon */
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
         }
 
-        /* 1. Permanent Underline (स्थायी रेखा) */
+        /* base underline */
         .underline {
             width: 100%;
             height: 4px;
@@ -238,34 +232,28 @@
             background-color: #ff0000;
         }
 
-        /* YouTube Red */
-
-        /* 2. Icons (जो पहले से नीचे छिपे हैं) */
+        /* hidden icons */
         .fa-brands {
             font-size: 50px;
             color: white;
             position: absolute;
             bottom: -50px;
-            /* लाइन के नीचे छिपा हुआ */
             opacity: 0;
             transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            /* Smooth Pop-up */
         }
 
-        /* 3. HOVER LOGIC: जब लाइन/कंटेनर पर माउस जाए */
+        /* hover effect */
         .icon-wrapper:hover .fa-brands {
             bottom: 10px;
-            /* नीचे से ऊपर आना */
             opacity: 1;
         }
 
-        /* होवर पर अंडरलाइन का गायब होना */
+        /* hide underline */
         .icon-wrapper:hover .underline {
             opacity: 0;
-
         }
 
-        /* अलग-अलग कलर्स */
+        /* brand colors */
         .icon-wrapper:hover .fa-facebook {
             color: #1877f2;
         }
@@ -278,23 +266,20 @@
             color: #ff0000;
         }
 
-        /* होवर पर स्पेसिफिक अंडरलाइन कलर (अगर आप दिखाना चाहें) */
         .fb-box:hover .underline {
             background-color: #1877f2;
         }
+        /* mobile */
+        .social-container {
+            display: flex;
+            gap: 20px;
+            margin-left: 20px;
+        }
 
-
-/* Default mobile screen ke liye margin chota rakho */
-.social-container {
-    display: flex;
-    gap: 20px;
-    margin-left: 20px; /* Mobile par kam margin taaki overflow na ho */
-}
-
-/* Jab screen badi ho (jaise laptop ya tablet), tab 80px margin apply ho */
-@media (min-width: 768px) {
-    .social-container {
-        margin-left: 80px;
-        gap: 40px;
-    }
-}
+        /* desktop */
+        @media (min-width: 768px) {
+            .social-container {
+                margin-left: 80px;
+                gap: 40px;
+            }
+        
